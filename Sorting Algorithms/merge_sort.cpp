@@ -6,7 +6,7 @@ void merge(int A[], int l, int m, int r) {
     int temp[100];
     int left = l;
     int right = m + 1;
-    int k = 0;
+    int k = l;
 
     while (left <= m && right <= r) {
         if (A[left] < A[right]) {
@@ -28,8 +28,8 @@ void merge(int A[], int l, int m, int r) {
         temp[k] = A[right];
     }
 
-    for (int i = 0; i < k; i++) {
-        A[l+i] = temp[i];
+    for (int i = l; i <= r; i++) {
+        A[i] = temp[i];
     }
 }
 
