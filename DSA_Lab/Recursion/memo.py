@@ -4,6 +4,7 @@ def memoFibo(n , table={}):
     else:
         if n not in table:
             table[n] = memoFibo(n-1) + memoFibo(n-2)
+            print(f"Computed fibo({n}) = {table[n]}")
         return table[n]
     
 

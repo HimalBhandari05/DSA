@@ -1,0 +1,28 @@
+# C / C++ compiled files
+*.o
+*.obj
+*.so
+*.a
+*.dll
+*.dylib
+*.exe
+*.out
+a.out
+
+# Build folders
+/build/
+/bin/
+/out/
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# Precompiled headers
+*.gch
+*.pch
+
+venv
+exe

@@ -90,7 +90,6 @@ int isEmpty(struct stack *s){
 
 int Pop(struct stack *s){
     int element;
-
     if (s->tos == -1){
         printf("The stack is empty ! \n");
     }

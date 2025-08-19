@@ -35,6 +35,4 @@ int main(){
 
 
 //  internal lmeans ---> main memory mei sort vayo vaney tyo internal sorting vayo if aru memory required vayo vaney tyo chai external sorting vayo 
-
-
 //  stable sort vaneko chai ---> suppose haami sanga key xa ani tyo chai sort garnu parne xa and sort garda key1  and key 2 ko order chai same nei rahyo vaney 

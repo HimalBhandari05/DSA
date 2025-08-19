@@ -9,6 +9,7 @@ long int ifact(int n , long int a){
     }
 }
 
+//  a chai 1 nei hunxa usually 
 
 int main(){
     int n , a;

@@ -10,7 +10,7 @@ int fibo(int n) {
     if (table[n] != 0) {
         return table[n];
     }
-    table[n] = fibo(n - 1) + fibo(n - 2);
+    table[n] = fibo(n - 1) + fibo(n - 2);    // Store the result in the table
     return table[n];
 }
 
