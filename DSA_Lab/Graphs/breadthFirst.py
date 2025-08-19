@@ -18,7 +18,6 @@ def bft(graph , start):
                 queue.append(adj_vert)
         
     return visited
-            
         
 returned_list = bft(graph ,'A')
 print(returned_list)
