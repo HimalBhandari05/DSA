@@ -39,6 +39,9 @@ def Kruskal(edges):
             minspanningtree.append((start , end , weight))
     return minspanningtree
 
+
+
+
 returned_mst = Kruskal(edges)
 
 def display(min_span_tree):

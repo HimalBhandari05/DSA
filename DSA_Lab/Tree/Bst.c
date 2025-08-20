@@ -46,10 +46,11 @@ void QuickSort(int A[], int l, int r)
     if (l < r)
     {
         int P = Partition(A, l, r);
-        QuickSort(A, l, P - 1); // p is already sorted
+        QuickSort(A, l, P - 1);
         QuickSort(A, P + 1, r);
     }
 }
+
 struct binaryTree
 {
     int data;
@@ -68,6 +69,36 @@ struct binaryTree *createNode(int data)
     newNode->left = NULL;
     newNode->parent = NULL;
     return newNode;
+}
+
+void preorder(struct binaryTree *root)
+{
+    if(root != NULL)
+    {
+        printf("%d ", root->data);
+        preorder(root->left);
+        preorder(root->right);
+    }
+}
+
+void inorder(struct binaryTree *root)
+{
+    if(root != NULL)
+    {
+        inorder(root->left);
+        printf("%d ", root->data);
+        inorder(root->right);
+    }
+}
+
+void postorder(struct binaryTree *root)
+{
+    if(root != NULL)
+    {
+        postorder(root->left);
+        postorder(root->right);
+        printf("%d ", root->data);
+    }
 }
 
 struct binaryTree *insertNode(struct binaryTree *root, int data)
@@ -175,7 +206,8 @@ int main()
 
     do
     {
-        printf("1. Insert\n2. FindMax\n3. FindMin\n4. Search\n5. Delete\n6. Exit\n");
+        printf("1. Insert\n2. FindMax\n3. FindMin\n4. Search\n5. Delete\n");
+        printf("6. Inorder\n7. Preorder\n8. Postorder\n9. Exit\n");
         printf("Enter your choice: \n");
         scanf("%d", &choice);
 
@@ -228,12 +260,30 @@ int main()
             else
                 printf("%d not found in tree.\n", value);
             break;
-
+            
         case 6:
+            printf("Inorder traversal: ");
+            inorder(root);
+            printf("\n");
+            break;
+            
+        case 7:
+            printf("Preorder traversal: ");
+            preorder(root);
+            printf("\n");
+            break;
+            
+        case 8:
+            printf("Postorder traversal: ");
+            postorder(root);
+            printf("\n");
+            break;
+
+        case 9:
             printf("Exited\n");
             exit(0);
         }
-    } while (choice != 6);
+    } while (choice != 9);
 
     return 0;
 }
