@@ -1,4 +1,3 @@
-// next line only . I am telling you to only suggest next line of code not the whole file or code block
 
 #include <stdio.h>
 #include <stdlib.h>
